@@ -5,6 +5,14 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging> 
   
+  <properties>
+        <!-- Enable Java 8 -->
+        <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- Configure the main class of our Spring Boot application -->
+        <start-class>com.meucarro.Main</start-class>
+    </properties>
+  
   <parent> 
          <groupId>org.springframework.boot</groupId> 
          <artifactId>spring-boot-starter-parent</artifactId> 
