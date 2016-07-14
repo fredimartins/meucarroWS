@@ -23,8 +23,8 @@ public class CarroResource {
 		carros = new HashMap<Integer, Carro>();
 
 		Carro c1 = new Carro(1, "ZZZ-9876", "VW Gol 1.6", 77238, true, -19.957482, -44.153719);
-		Carro c2 = new Carro(1, "AAA-1234", "Fiat Mobi 1.4", 10345, true, -19.954094, -44.156809);
-		Carro c3 = new Carro(1, "BBB-5678", "Ford Belina 1.8", 600234, false, -19.954195, -44.150436);
+		Carro c2 = new Carro(2, "AAA-1234", "Fiat Mobi 1.4", 10345, true, -19.954094, -44.156809);
+		Carro c3 = new Carro(3, "BBB-5678", "Ford Belina 1.8", 600234, false, -19.954195, -44.150436);
 
 		carros.put(c1.getId(), c1);
 		carros.put(c2.getId(), c2);
