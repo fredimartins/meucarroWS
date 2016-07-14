@@ -26,9 +26,9 @@ public class CarroResource {
 		Carro c2 = new Carro(1, "AAA-1234", "Fiat Mobi 1.4", 10345, true, -19.954094, -44.156809);
 		Carro c3 = new Carro(1, "BBB-5678", "Ford Belina 1.8", 600234, false, -19.954195, -44.150436);
 
-		carros.put(1, c1);
-		carros.put(2, c2);
-		carros.put(3, c3);
+		carros.put(c1.getId(), c1);
+		carros.put(c2.getId(), c2);
+		carros.put(c2.getId(), c3);
 	}
 
 	@RequestMapping(value = "/carros", method = RequestMethod.GET)
