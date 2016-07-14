@@ -28,7 +28,7 @@ public class CarroResource {
 
 		carros.put(c1.getId(), c1);
 		carros.put(c2.getId(), c2);
-		carros.put(c2.getId(), c3);
+		carros.put(c3.getId(), c3);
 	}
 
 	@RequestMapping(value = "/carros", method = RequestMethod.GET)
