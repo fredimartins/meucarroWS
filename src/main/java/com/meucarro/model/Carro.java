@@ -1,6 +1,7 @@
 package com.meucarro.model;
 
 import java.util.Date;
+import java.util.Random;
 
 public class Carro {
 
@@ -15,11 +16,12 @@ public class Carro {
 	private Date ultimoStatus;
 
 	public Carro(Integer id, String placa, String desc, int hodometro, boolean alarme, double lat, double lng) {
+		Random randomGenerator = new Random();
 		this.id = id;
 		this.placa = placa;
 		this.desc = desc;
 		this.hodometro = hodometro;
-		this.ultima_troca_oleo = hodometro - (id * 1000);
+		this.ultima_troca_oleo = randomGenerator.nextInt(hodometro);
 		this.alarme = alarme;
 		this.lat = lat;
 		this.lng = lng;
