@@ -24,6 +24,14 @@ public class CarroResource {
 	private Map<Integer, Carro> carros;
 
 	public CarroResource() {
+		fillCars();
+	}
+	
+	protected void deleteAllCars(){
+		carros.clear();
+	}
+	
+	protected void fillCars(){
 		carros = new HashMap<Integer, Carro>();
 
 		Carro c1 = new Carro(1, "ZZZ-9876", "VW Gol 1.6", 77238, true, -19.957482, -44.153719);
@@ -37,6 +45,13 @@ public class CarroResource {
 
 	@RequestMapping(value = "/carros", method = RequestMethod.GET)
 	public ResponseEntity<List<Carro>> listar() {
+		return new ResponseEntity<List<Carro>>(new ArrayList<Carro>(carros.values()), HttpStatus.OK);
+	}
+	
+	@RequestMapping(value = "/carros/renew", method = RequestMethod.GET)
+	public ResponseEntity<List<Carro>> renew() {
+		deleteAllCars();
+		fillCars();
 		return new ResponseEntity<List<Carro>>(new ArrayList<Carro>(carros.values()), HttpStatus.OK);
 	}
 
