@@ -23,6 +23,7 @@ public class Carro {
 		this.alarme = alarme;
 		this.lat = lat;
 		this.lng = lng;
+		this.ultimoStatus = new Date();
 	}
 
 	public Integer getId() {
